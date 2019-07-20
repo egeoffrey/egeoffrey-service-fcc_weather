@@ -1,0 +1,9 @@
+package: myhouse-service-fcc_weather
+revision: 1
+version: development
+github: myhouse-project/myhouse-service-fcc_weather
+dockerhub: myhouseproject/myhouse-service-fcc_weather
+description: Retrieve weather information from Free Code Camp Weather API
+tags: service weather
+modules:
+  - service/fcc_weather
