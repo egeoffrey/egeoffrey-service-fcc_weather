@@ -1,27 +1,28 @@
-manifest_schema: 1
-package: myhouse-service-fcc_weather
-revision: 2
-version: development
-github: myhouse-project/myhouse-service-fcc_weather
-dockerhub: myhouseproject/myhouse-service-fcc_weather
+branch: development
 description: Retrieve weather information from Free Code Camp Weather API
-tags: service weather
+dockerhub: myhouseproject/myhouse-service-fcc_weather
+github: myhouse-project/myhouse-service-fcc_weather
+manifest_schema: 2
 modules:
-  - service/fcc_weather:
-      description: Retrieve weather information from Free Code Camp Weather API
-      service_configuration: 
-        active: 
-          - name: request
-            description: What to measure
-            format: temperature|pressure|humidity|wind|wind_dir|condition|description|visibility|clouds
-            required: true
-          - name: latitude
-            description: The latitude of the location
-            placeholder: 12.33
-            required: true
-            format: float
-          - name: longitude
-            description: The longitude of the location
-            placeholder: 70.11
-            required: true
-            format: float
+- service/fcc_weather:
+    description: Retrieve weather information from Free Code Camp Weather API
+    service_configuration:
+      active:
+      - description: What to measure
+        format: temperature|pressure|humidity|wind|wind_dir|condition|description|visibility|clouds
+        name: request
+        required: true
+      - description: The latitude of the location
+        format: float
+        name: latitude
+        placeholder: 12.33
+        required: true
+      - description: The longitude of the location
+        format: float
+        name: longitude
+        placeholder: 70.11
+        required: true
+package: myhouse-service-fcc_weather
+revision: 3
+tags: service weather
+version: 1.0
