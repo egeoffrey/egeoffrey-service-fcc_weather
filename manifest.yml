@@ -2,6 +2,7 @@ branch: development
 description: Retrieve weather information from Free Code Camp Weather API
 dockerhub: myhouseproject/myhouse-service-fcc_weather
 github: myhouse-project/myhouse-service-fcc_weather
+icon: cloud-sun
 manifest_schema: 2
 modules:
 - service/fcc_weather:
@@ -23,6 +24,6 @@ modules:
         placeholder: 70.11
         required: true
 package: myhouse-service-fcc_weather
-revision: 3
+revision: 4
 tags: service weather
 version: 1.0
