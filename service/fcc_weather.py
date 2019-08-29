@@ -29,16 +29,11 @@ class Fcc_weather(Service):
     def on_init(self):
         # constants
         self.url = 'https://fcc-weather-api.glitch.me/api/current'
-        # helpers
-        self.date = None
-        # require configuration before starting up
-        self.add_configuration_listener("house", 1, True)
-
 
     # set the value and timestamp to the message
     def set_measure(self, message, value, timestamp):
         message.set("value", value)
-        message.set("timestamp", self.date.timezone(int(timestamp)))
+        message.set("timestamp", int(timestamp))
     
     # What to do when running    
     def on_start(self):
@@ -123,6 +118,4 @@ class Fcc_weather(Service):
 
     # What to do when receiving a new/updated configuration for this module
     def on_configuration(self,message):
-        if message.args == "house" and not message.is_null:
-            if not self.is_valid_configuration(["timezone"], message.get_data()): return False
-            self.date = DateTimeUtils(message.get("timezone"))
+        pass
