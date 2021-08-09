@@ -61,4 +61,4 @@ service weather
 
 ## Version
 
-The version of this egeoffrey-service-fcc_weather is 1.0-13 on the master branch.
+The version of this egeoffrey-service-fcc_weather is 1.1-1 on the master branch.
